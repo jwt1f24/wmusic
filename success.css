@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to top, rgba(0,0,0,0.6)50%,rgba(0,0,0,0.6)50%), url(https://www.shutterstock.com/image-photo/different-musical-instruments-music-notes-600nw-2481827083.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* payment successful page */
+.success-container {
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+#success-form h1 {
+    font-family: 'Arial';
+    font-size: 300%;
+}
+
+#close-btn {
+    color: white;
+    font-family: 'Arial';
+    font-size: 25px;
+    padding: 10px 30px;
+    border: 1px solid rgb(199, 199, 199);
+    background: linear-gradient(#606060, #404040);
+}
+
+#close-btn:hover {
+    border: 1px solid #808080;
+    background: linear-gradient(#303030, #101010);
+    box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.5);
+}

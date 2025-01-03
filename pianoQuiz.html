@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Quiz - WMUSIC</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" id="list-button">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+        <a class="brand" href="index.html">
+            <h1>WMUSIC</h1>
+        </a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-menu" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="lesson-schedule.html">Schedules</a></li>
+            <li><a href="progress-tracking.html">Progression</a></li>
+            <li><a href="assignment-system.html">Assignments</a></li>
+            <li><a href="resource-booking.html">Booking</a></li>
+        </ul>  
+    </div>
+
+    <div class="assignment-section">
+        <div class="caption">
+            <h1>Assignment Practice</h1><br>
+            <h1>~ Piano Quiz ~</h1><br><br>
+        </div>
+
+        <div id="quizForm">
+            <div class="question" id="q1">
+                <h2>1. What comes after Do-Re-?</h2>
+                <div id="options">
+                    <button id="option" onclick="submitAns(1)">Mi</button>
+                    <button id="option" onclick="submitAns(2)">Fa</button>
+                    <button id="option" onclick="submitAns(3)">So</button>
+                </div>
+            </div>
+
+            <div class="question" id="q2">
+                <h2>2. Who composed Claire de Lune?</h2>
+                <div id="options">
+                    <button id="option" onclick="submitAns(4)">Beethoven</button>
+                    <button id="option" onclick="submitAns(5)">Mozart</button>
+                    <button id="option" onclick="submitAns(6)">Debussy</button>
+                </div>
+            </div>
+
+            <div class="question" id="q3">
+                <h2>3. How many keys does a piano have?</h2>
+                <div id="options">
+                    <button id="option" onclick="submitAns(7)">78</button>
+                    <button id="option" onclick="submitAns(8)">88</button>
+                    <button id="option" onclick="submitAns(9)">98</button>
+                </div>
+            </div>
+            
+            <div id="correct1">
+                <h2>Correct!</h2>
+                <div id="options">
+                    <button id="option" onclick="submitAns('continue1')">Continue</button>
+                </div>
+            </div>
+
+            <div id="incorrect1">
+                <h2>Incorrect!</h2>
+                <div id="options">
+                    <button id="option" onclick="submitAns('continue1')">Continue</button>
+                </div>
+            </div>
+
+            <div id="correct2">
+                <h2>Correct!</h2>
+                <div id="options">
+                    <button id="option" onclick="submitAns('continue2')">Continue</button>
+                </div>
+            </div>
+
+            <div id="incorrect2">
+                <h2>Incorrect!</h2>
+                <div id="options">
+                    <button id="option" onclick="submitAns('continue2')">Continue</button>
+                </div>
+            </div>
+
+            <div id="correct3">
+                <h2>Correct!</h2>
+                <div id="options">
+                    <button id="option" onclick="submitAns('continue3')">Continue</button>
+                </div>
+            </div>
+
+            <div id="incorrect3">
+                <h2>Incorrect!</h2>
+                <div id="options">
+                    <button id="option" onclick="submitAns('continue3')">Continue</button>
+                </div>
+            </div>
+
+            <div id="resultForm">
+                <h2>Nice try! Practice makes perfect~</h2>
+
+                <div id="options">
+                    <button id="retry-btn" onclick="submitAns('retry')">Retry</button>
+                    <button id="return-btn" onclick="windowClose()">Return</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

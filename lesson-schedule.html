@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedules - WMUSIC</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" id="list-button">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+        <a class="brand" href="index.html">
+            <h1>WMUSIC</h1>
+        </a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-menu" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="lesson-schedule.html">Schedules</a></li>
+            <li><a href="progress-tracking.html">Progression</a></li>
+            <li><a href="assignment-system.html">Assignments</a></li>
+            <li><a href="resource-booking.html">Booking</a></li>
+        </ul>  
+    </div>
+
+    <!-- Calendar -->
+    <div class="timetable-container">
+        <div class="caption">
+            <h1>Lesson Scheduling</h1>
+            <p>Your can view your upcoming sessions here.</p>
+        </div>
+
+        <div id="timetable">
+            <div id="schedule-title">
+                <h1 id="jan-title">Weekly timetable for January 2025</h1>
+                <h1 id="feb-title">Weekly timetable for February 2025</h1>
+                <h1 id="mar-title">Weekly timetable for March 2025</h1>
+                <h1 id="apr-title">Weekly timetable for April 2025</h1>
+                <h1 id="may-title">Weekly timetable for May 2025</h1>
+                <h1 id="jun-title">Weekly timetable for June 2025</h1>
+                <h1 id="jul-title">Weekly timetable for July 2025</h1>
+                <h1 id="aug-title">Weekly timetable for August 2025</h1>
+                <h1 id="sep-title">Weekly timetable for September 2025</h1>
+                <h1 id="oct-title">Weekly timetable for October 2025</h1>
+                <h1 id="nov-title">Weekly timetable for November 2025</h1>
+                <h1 id="dec-title">Weekly timetable for December 2025</h1>
+            </div>
+
+            <!-- add a pop up mini-page when a slot is clicked -->
+            <div id="schedule-details-container">
+                <button id="close-detail" onclick="closeDetail()">x</button>
+                <div class="schedule-details" id="empty-slot">
+                    <h2>This slot is empty.</h2>
+                </div>
+                <div class="schedule-details" id="p-slot">
+                    <h2>You have a piano class during this time!</h2>
+                </div>
+                <div class="schedule-details" id="g-slot">
+                    <h2>You have a guitar class during this time!</h2>
+                </div>
+                <div class="schedule-details" id="v-slot">
+                    <h2>You have a violin class during this time!</h2>
+                </div>
+                <div class="schedule-details" id="c-slot">
+                    <h2>You have choir practice during this time!</h2>
+                </div>
+            </div>
+
+            <!-- use time as the heading columns -->
+            <div id="time-column">
+                <div class="time-slot"></div>
+                <div class="time-slot">10.00 - 12.00</div>
+                <div class="time-slot">12.00 - 14.00</div>
+                <div class="time-slot">14.00 - 16.00</div>
+                <div class="time-slot">16.00 - 18.00</div>
+                <div class="time-slot">18.00 - 20.00</div>
+            </div>
+
+            <!-- January -->
+            <div id="January">
+                <!-- use days and general slots to form rows -->
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <!-- February -->
+            <div id="February">
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <!-- March -->
+            <div id="March">
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <!-- April -->
+            <div id="April">
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <!-- May -->
+            <div id="May">
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <!-- June -->
+            <div id="June">
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <!-- July -->
+            <div id="July">
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <!-- August -->
+            <div id="August">
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <!-- September -->
+            <div id="September">
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <!-- October -->
+            <div id="October">
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <!-- November-->
+            <div id="November">
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="class-c"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-v"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-g"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="class-p"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <!-- December -->
+            <div id="December">
+                <div id="day-row">
+                    <div class="day-slot">MON</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">TUE</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">WED</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">THU</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">FRI</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SAT</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+
+                <div id="day-row">
+                    <div class="day-slot">SUN</div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                    <div class="slot" id="empty"></div>
+                </div>
+            </div>
+
+            <div id="timetable-month">
+                <div id="jan-btn">
+                    <button class="month-btn" onclick="month2()">></button>
+                </div>
+
+                <div id="feb-btn">
+                    <button class="month-btn" onclick="month1()"><</button>
+                    <button class="month-btn" onclick="month3()">></button>
+                </div>
+
+                <div id="mar-btn">
+                    <button class="month-btn" onclick="month2b()"><</button>
+                    <button class="month-btn" onclick="month4()">></button>
+                </div>
+
+                <div id="apr-btn">
+                    <button class="month-btn" onclick="month3b()"><</button>
+                    <button class="month-btn" onclick="month5()">></button>
+                </div>
+
+                <div id="may-btn">
+                    <button class="month-btn" onclick="month4b()"><</button>
+                    <button class="month-btn" onclick="month6()">></button>
+                </div>
+
+                <div id="jun-btn">
+                    <button class="month-btn" onclick="month5b()"><</button>
+                    <button class="month-btn" onclick="month7()">></button>
+                </div>
+
+                <div id="jul-btn">
+                    <button class="month-btn" onclick="month6b()"><</button>
+                    <button class="month-btn" onclick="month8()">></button>
+                </div>
+
+                <div id="aug-btn">
+                    <button class="month-btn" onclick="month7b()"><</button>
+                    <button class="month-btn" onclick="month9()">></button>
+                </div>
+
+                <div id="sep-btn">
+                    <button class="month-btn" onclick="month8b()"><</button>
+                    <button class="month-btn" onclick="month10()">></button>
+                </div>
+
+                <div id="oct-btn">
+                    <button class="month-btn" onclick="month9b()"><</button>
+                    <button class="month-btn" onclick="month11()">></button>
+                </div>
+
+                <div id="nov-btn">
+                    <button class="month-btn" onclick="month10b()"><</button>
+                    <button class="month-btn" onclick="month12()">></button>
+                </div>
+
+                <div id="dec-btn">
+                    <button class="month-btn" onclick="month11b()"><</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker - WMUSIC</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" id="list-button">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+        <a class="brand" href="index.html">
+            <h1>WMUSIC</h1>
+        </a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-menu" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="lesson-schedule.html">Schedules</a></li>
+            <li><a href="progress-tracking.html">Progression</a></li>
+            <li><a href="assignment-system.html">Assignments</a></li>
+            <li><a href="resource-booking.html">Booking</a></li>
+        </ul>  
+    </div>
+
+    <!-- Progress Tracker Section -->
+    <div class="tracker" id="tracker">
+        <div class="caption">
+            <h1>Student Progress Tracker</h1>
+            <p>Advance your music-playing skills!</p>
+        </div>
+        
+        <br>
+
+        <div class="tracker-tab">
+            <div class="tracker-task" id="btn-b" onclick="trackerTab('beginner')">Beginner</div>
+            <div class="tracker-task" id="btn-i" onclick="trackerTab('intermediate')">Intermediate</div>
+            <div class="tracker-task" id="btn-a" onclick="trackerTab('advanced')">Advanced</div>
+        </div>
+
+        <div class="tracker-form">
+            <div id="beginner">
+                <br><h1>Beginner</h1><br>
+                <ul>
+                    <li>
+                        <div class="task-name">
+                            <h2>Beginner I</h2>
+                            <p>Play "Do-Re-Mi-Fa-So" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Beginner II</h2>
+                            <p>Play "Twinkle Twinkle Little Star" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Beginner III</h2>
+                            <p>Play "Jingle Bells" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Beginner IV</h2>
+                            <p>Play "Old McDonald" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Beginner V</h2>
+                            <p>Play "Ode to Joy" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Beginner VI</h2>
+                            <p>Play "Minuet in G" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Beginner VII</h2>
+                            <p>Play "Aura Lee" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Beginner VIII</h2>
+                            <p>Play "il vento d'oro" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+                    <br>
+                </ul>
+            </div>
+            
+            <div id="intermediate">
+                <br><h1>Intermediate</h1><br>
+                <ul>
+                    <li>
+                        <div class="task-name">
+                            <h2>Intermediate I</h2>
+                            <p>Play "Claire de Lune" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Intermediate II</h2>
+                            <p>Play "Canon" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Intermediate III</h2>
+                            <p>Play "Fur Elise" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Intermediate IV</h2>
+                            <p>Play "Nocturne, Op. 9" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Intermediate V</h2>
+                            <p>Play "Golden Hour" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Intermediate VI</h2>
+                            <p>Play "Bella Ciao" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Intermediate VII</h2>
+                            <p>Play "River Flows In You" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Intermediate VIII</h2>
+                            <p>Play "Ghost in a Flower" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+                    <br>
+                </ul>
+            </div>
+
+            <div id="advanced">
+                <br><h1>Advanced</h1><br>
+                <ul>
+                    <li>
+                        <div class="task-name">
+                            <h2>Advanced I</h2>
+                            <p>Play "crystallized" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Advanced II</h2>
+                            <p>Play "Suite, No. 1 in G" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Advanced III</h2>
+                            <p>Play "Libertango" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Advanced IV</h2>
+                            <p>Play "Spanish Dance, No. 5" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Advanced V</h2>
+                            <p>Play "La Campanella" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Advanced VI</h2>
+                            <p>Play "Yoru Ni Kakeru" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Advanced VII</h2>
+                            <p>Play "Moonlight Sonata, 3rd Movement" using any instrument.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+
+                    <li>
+                        <div class="task-name">
+                            <h2>Advanced VIII</h2>
+                            <p>Complete any advanced piece without missing a single note and rythm.</p>
+                        </div>
+                        <input type="checkbox">
+                    </li>
+                    <br>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

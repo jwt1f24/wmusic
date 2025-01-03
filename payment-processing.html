@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - WMUSIC</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" id="list-button">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+        <a class="brand" href="index.html">
+            <h1>WMUSIC</h1>
+        </a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-menu" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="lesson-schedule.html">Schedules</a></li>
+            <li><a href="progress-tracking.html">Progression</a></li>
+            <li><a href="assignment-system.html">Assignments</a></li>
+            <li><a href="resource-booking.html">Booking</a></li>
+        </ul>  
+    </div>
+
+    <!-- Payment Processing section -->
+    <div class="payment-section">
+        <div class="payment-form">
+            <h1>Payment Checkout</h1>
+
+            <form id="payment-details" action="success.html" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter name" required>
+                
+                <br>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="username@email.com" required>
+
+                <br>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" min="2025-01-01" max="2025-11-30" required>
+
+                <br>
+
+                <label for="time">Time</label>
+                <select id="timeOption" name="time" required>
+                    <option value="t1">10 AM</option>
+                    <option value="t2">12 PM</option>
+                    <option value="t3">2 PM</option>
+                    <option value="t4">4 PM</option>
+                    <option value="t5">6 PM</option>
+                </select>
+
+                <br>
+
+                <label for="method">Payment Method</label>
+                <select id="method" name="method" required>
+                    <option value="m1">PayPal</option>
+                    <option value="m2">AliPay</option>
+                    <option value="m3">Touch n' Go</option>
+                    <option value="m4">Maybank</option>
+                </select>
+
+                <br>
+               
+                <div id="price">
+                    <h3>Total Price:</h3>
+                    <p class="price">$ 25.00</p>
+                </div>
+
+                <br><br>
+
+                <div id="checkout-btn">
+                    <button id="book0" type="submit" onclick="windowClose()">Cancel Booking</button>    
+                    <button id="book1" type="submit">Confirm Checkout</button>    
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

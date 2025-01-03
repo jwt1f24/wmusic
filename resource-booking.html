@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - WMUSIC</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" id="list-button">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+        <a class="brand" href="index.html">
+            <h1>WMUSIC</h1>
+        </a>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-menu" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="lesson-schedule.html">Schedules</a></li>
+            <li><a href="progress-tracking.html">Progression</a></li>
+            <li><a href="assignment-system.html">Assignments</a></li>
+            <li><a href="resource-booking.html">Booking</a></li>
+        </ul>  
+    </div>
+
+    <!-- Resource Booking Section -->
+    <div class="booking-section">
+        <div class="booking-form">
+            <h1><strong>Reserve a studio room</strong></h1>
+
+            <div id="status">
+                <div id="state">Available</div>
+                <div id="state">Unavailable</div>
+                <div id="state">Selected</div>
+            </div>
+
+            <div id="room-list">
+                <div class="rooms">
+                    <a class="room" id="r1">Room 1</a>
+                    <a href="payment-processing.html" target="_blank" class="room" id="r2">Room 2</a>
+                    <a href="payment-processing.html" target="_blank" class="room" id="r3">Room 3</a>
+                </div>
+                <br>
+                <div class="rooms">
+                    <a href="payment-processing.html" target="_blank" class="room" id="r4">Room 4</a>
+                    <a href="payment-processing.html" target="_blank" class="room" id="r5">Room 5</a>
+                    <a href="payment-processing.html" target="_blank" class="room" id="r6">Room 6</a>
+                </div>
+                <br>
+                <div class="rooms">
+                    <a href="payment-processing.html" target="_blank" class="room" id="r7">Room 7</a>
+                    <a href="payment-processing.html" target="_blank" class="room" id="r8">Room 8</a>
+                    <a href="payment-processing.html" target="_blank" class="room" id="r9">Room 9</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
